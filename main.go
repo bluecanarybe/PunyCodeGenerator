@@ -2,13 +2,43 @@ package main
 
 import (
 	"fmt"
+	"net/http"
 	"os"
 	"strings"
 
 	"golang.org/x/net/idna"
 )
 
+func httpstatus(url string) string {
+	_, err := http.Get(url)
+	if err != nil {
+		return ("Domain available!")
+	} else {
+		return ("Domain not available!")
+	}
+}
+
 func main() {
+
+	// throw some ascii art as intro
+
+	asciiArt :=
+		`
+=============================================================================================
+______                  _____           _      _____                                        
+| ___ \                /  __ \         | |    |  __ \                         | |            
+| |_/ /   _ _ __  _   _| /  \/ ___   __| | ___| |  \/ ___ _ __   ___ _ __ __ _| |_ ___  _ __ 
+|  __/ | | | '_ \| | | | |    / _ \ / _' |/ _ \ | __ / _ \ '_ \ / _ \ '__/ _' | __/ _ \| '__|
+| |  | |_| | | | | |_| | \__/\ (_) | (_| |  __/ |_\ \  __/ | | |  __/ | | (_| | || (_) | |   
+\_|   \__,_|_| |_|\__, |\____/\___/ \__,_|\___|\____/\___|_| |_|\___|_|  \__,_|\__\___/|_|   
+                   __/ |                                                                                                                             
+=============================================================================================
+					 	                             BY BLUECANARY.BE
+`
+
+	println(asciiArt)
+
+	// check if domain is given as argument //TODO
 
 	// create map 'homoglyphs" with arrays as value
 
@@ -22,7 +52,7 @@ func main() {
 		"h": []string{"һ"},
 		"i": []string{"і"},
 		"j": []string{"ϳ"},
-		"k": []string{"ｋ"},
+		//f"k": []string{"ｋ"},
 		"l": []string{"ӏ"},
 		"m": []string{"Μ"},
 		"n": []string{"ɴ"},
@@ -45,7 +75,11 @@ func main() {
 	domainslice := strings.Split(givendomain, ".") // put domain in slice
 	domain := domainslice[0]
 	extension := domainslice[1]
+	protocol := string("https://")
+
 	fmt.Println("Genereated punycode domains for", givendomain, ":")
+
+	// check if generated punycode domains exist
 
 	// logic to check if letter can be swapped with homoglyph
 
@@ -62,10 +96,12 @@ func main() {
 
 			// generate ascii domain
 			ascii, _ := idna.Lookup.ToASCII(removespaces)
+			asciiurl := string(protocol + ascii)
+			//httpresponse := httpstatus(asciiurl)
 
 			// find & replace normal chars with homoglyphs
-			fmt.Println(removespaces, "        ", ascii)
+			fmt.Println(removespaces, "      ", ascii, "      ", httpstatus(asciiurl))
+
 		}
 	}
-
 }
