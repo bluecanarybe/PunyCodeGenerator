@@ -59,10 +59,12 @@ func main() {
 			substitute := strings.Replace(domain, letter, singlestring, 1)
 			punycodedomain := substitute + "." + extension
 			removespaces := strings.Replace(punycodedomain, " ", "", -1)
-			// find & replace normal chars with homoglyphs
-			fmt.Println(removespaces)
-			fmt.Println(idna.Lookup.ToASCII(removespaces))
 
+			// generate ascii domain
+			ascii, _ := idna.Lookup.ToASCII(removespaces)
+
+			// find & replace normal chars with homoglyphs
+			fmt.Println(removespaces, "        ", ascii)
 		}
 	}
 
