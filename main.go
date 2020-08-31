@@ -25,13 +25,13 @@ func main() {
 		"k": []string{"ｋ"},
 		"l": []string{"ӏ"},
 		"m": []string{"ⅿ"},
-		"n": []string{"ｎ"},
+		"n": []string{"ɴ"},
 		"o": []string{"ο"},
 		"p": []string{"р"},
 		"q": []string{"ｑ"},
-		"r": []string{"ｒ"},
+		"r": []string{"ʀ"},
 		"s": []string{"ѕ"},
-		"t": []string{"ｔ"},
+		"t": []string{"ṭ"},
 		"u": []string{"υ"},
 		"v": []string{"ⅴ"},
 		"w": []string{"ѡ"},
@@ -45,7 +45,7 @@ func main() {
 	domainslice := strings.Split(givendomain, ".") // put domain in slice
 	domain := domainslice[0]
 	extension := domainslice[1]
-	fmt.Println("Genereated punycode domains for", domain, extension, ":")
+	fmt.Println("Genereated punycode domains for", givendomain, ":")
 
 	// logic to check if letter can be swapped with homoglyph
 
