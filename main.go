@@ -14,7 +14,7 @@ func main() {
 
 	homoglyphs := map[string][]string{
 		"a": []string{"а"},
-		//"b": []string{},
+		"b": []string{"ḅ"},
 		"c": []string{"с"},
 		"d": []string{"ԁ"},
 		"e": []string{"е"},
@@ -22,22 +22,22 @@ func main() {
 		"h": []string{"һ"},
 		"i": []string{"і"},
 		"j": []string{"ϳ"},
-		//"k": []string{},
+		"k": []string{"ｋ"},
 		"l": []string{"ӏ"},
 		"m": []string{"ⅿ"},
-		"n": []string{},
+		"n": []string{"ｎ"},
 		"o": []string{"ο"},
 		"p": []string{"р"},
-		//"q": []string{},
-		//"r": []string{},
+		"q": []string{"ｑ"},
+		"r": []string{"ｒ"},
 		"s": []string{"ѕ"},
-		//"t": []string{},
+		"t": []string{"ｔ"},
 		"u": []string{"υ"},
 		"v": []string{"ⅴ"},
 		"w": []string{"ѡ"},
 		"x": []string{"х"},
 		"y": []string{"у"},
-		//"z": []string{},
+		"z": []string{"ẓ"},
 	}
 
 	// get domain from argument
