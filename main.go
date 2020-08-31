@@ -24,7 +24,7 @@ func main() {
 		"j": []string{"ϳ"},
 		"k": []string{"ｋ"},
 		"l": []string{"ӏ"},
-		"m": []string{"ⅿ"},
+		"m": []string{"Μ"},
 		"n": []string{"ɴ"},
 		"o": []string{"ο"},
 		"p": []string{"р"},
