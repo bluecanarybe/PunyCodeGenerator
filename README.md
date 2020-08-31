@@ -16,7 +16,7 @@ Inspired by:
 
 ```
 ./PunyCodeGenerator google.com
-Genereated punycode domains for google com :
+Genereated punycode domains for google.com :
 ɡoogle.com          xn--oogle-qmc.com
 gοogle.com          xn--gogle-rce.com
 gοogle.com          xn--gogle-rce.com
