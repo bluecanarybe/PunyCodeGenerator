@@ -25,4 +25,4 @@ googӏe.com          xn--googe-hof.com
 googlе.com          xn--googl-3we.com
 ```
 ### Disclaimer
-My code probably sucks but it does the job for me. If you don't like it, go on or create a pull request.
+If you don't like my code,  feel free to create a pull request.
